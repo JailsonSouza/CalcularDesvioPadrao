@@ -10,13 +10,13 @@ int main() {
     int cont;
     //float vet[10] = {1,23,3,4,15,61,7,58,92,10};
     float somatorio, media, result;
-    float vet[10];
+    double vet[10];
     // preencher os valores do vetor
     for (cont=0;cont < 10; cont ++){
-        printf("Informe o %f valor do vetor: ", cont+1);
-        scanf("%f", vet[cont]);
+        printf("Informe o %d valor do vetor: ", cont+1);
+        scanf("%lf", &vet[cont]);
     }
-    
+
     for (cont=0;cont < 10; cont ++){
         somatorio += vet[cont];
     }
@@ -29,6 +29,6 @@ int main() {
 
     result = sqrt(somatorio/9);
     
-    printf("Desvio Padrao: %.2f\n", result);
+    printf("Desvio Padrao: %.2lf\n", result);
     return 0;
 }
